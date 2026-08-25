@@ -1,0 +1,54 @@
+/* Navegação fixa: marca, links, CTA, toggle mobile */
+.nav {
+  position: fixed; inset: 0 0 auto 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 2rem; padding: 1.5rem var(--pad);
+  transition: padding 0.5s var(--ease), background 0.5s var(--ease), border-color 0.5s var(--ease), backdrop-filter 0.5s var(--ease);
+  border-bottom: 1px solid transparent;
+}
+.nav.scrolled {
+  padding-block: 0.95rem;
+  background: oklch(0.155 0.013 52 / 0.72);
+  backdrop-filter: blur(18px) saturate(1.2);
+  -webkit-backdrop-filter: blur(18px) saturate(1.2);
+  border-bottom: 1px solid var(--line);
+}
+.brand {
+  font-family: var(--serif-display);
+  font-size: 1.55rem; letter-spacing: 0.34em; font-weight: 500;
+  padding-left: 0.34em;
+  display: flex; align-items: center; gap: 0.7rem;
+}
+.brand .sun {
+  width: 9px; height: 9px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, var(--gold), var(--rose));
+  box-shadow: 0 0 14px 2px var(--peach);
+}
+.nav-links { display: flex; gap: clamp(1.2rem, 2vw, 2.4rem); align-items: center; }
+.nav-links a {
+  font-size: 0.86rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--ink-soft); position: relative; transition: color 0.3s var(--ease);
+}
+.nav-links a::after {
+  content: ""; position: absolute; left: 0; bottom: -4px; height: 1px; width: 0;
+  background: var(--accent); transition: width 0.35s var(--ease);
+}
+.nav-links a:hover { color: var(--ink); }
+.nav-links a:hover::after { width: 100%; }
+.nav-cta {
+  font-size: 0.82rem; letter-spacing: 0.14em; text-transform: uppercase;
+  border: 1px solid var(--line); color: var(--ink);
+  padding: 0.6rem 1.2rem; border-radius: 999px;
+  transition: border-color 0.3s var(--ease), background 0.3s var(--ease), color 0.3s var(--ease);
+}
+.nav-cta:hover { border-color: var(--peach); background: var(--peach); color: var(--bg); }
+.nav-toggle { display: none; }
+
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+  .nav-toggle {
+    display: inline-flex; flex-direction: column; gap: 5px; padding: 8px; cursor: pointer;
+    background: none; border: 0;
+  }
+  .nav-toggle span { width: 26px; height: 1.5px; background: var(--ink); display: block; }
+}

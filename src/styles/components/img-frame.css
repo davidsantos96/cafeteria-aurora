@@ -1,0 +1,8 @@
+/* Moldura de imagem reutilizada em hero, features, galeria e visite */
+.img-frame {
+  position: relative; overflow: hidden;
+  background: var(--bg-2); border-radius: 12px;
+}
+.img-frame img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}

@@ -1,0 +1,11 @@
+/* Overlay de menu mobile, aberto/fechado via classe .open (controlada em JS) */
+.mobile-menu {
+  position: fixed; inset: 0; z-index: 99;
+  background: oklch(0.155 0.013 52 / 0.97);
+  backdrop-filter: blur(20px);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.6rem;
+  opacity: 0; pointer-events: none; transition: opacity 0.4s var(--ease);
+}
+.mobile-menu.open { opacity: 1; pointer-events: auto; }
+.mobile-menu a { font-family: var(--serif-display); font-size: 2.2rem; color: var(--ink); }
+.mobile-menu a:hover { color: var(--peach); }

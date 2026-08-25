@@ -1,0 +1,4 @@
+/* Primitivas de layout compartilhadas entre seções */
+.wrap { width: 100%; max-width: var(--maxw); margin-inline: auto; padding-inline: var(--pad); }
+section { position: relative; z-index: 1; }
+.section-pad { padding-block: clamp(5rem, 11vw, 11rem); }

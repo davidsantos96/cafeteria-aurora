@@ -1,0 +1,13 @@
+/* Faixa de estatísticas animadas (origem, métodos, temperatura) */
+.band { background: var(--bg-2); border-block: 1px solid var(--line); }
+.band-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.stat { text-align: center; }
+.stat .big {
+  font-family: var(--serif-display); font-size: clamp(3rem, 7vw, 5.6rem);
+  line-height: 1; color: var(--peach);
+}
+.stat .cap { display: block; margin-top: 0.8rem; color: var(--ink-soft); font-size: 1rem; letter-spacing: 0.04em; }
+
+@media (max-width: 900px) {
+  .band-grid { grid-template-columns: 1fr; gap: 3rem; }
+}

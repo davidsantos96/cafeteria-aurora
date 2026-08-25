@@ -1,0 +1,21 @@
+/* Tokens de design — cores (oklch), espaçamento, tipografia, easing */
+:root {
+  --bg:        oklch(0.155 0.013 52);
+  --bg-2:      oklch(0.195 0.016 50);
+  --bg-3:      oklch(0.235 0.018 48);
+  --ink:       oklch(0.945 0.012 78);
+  --ink-soft:  oklch(0.785 0.016 72);
+  --ink-faint: oklch(0.665 0.018 66);
+  --line:      oklch(0.34 0.014 58 / 0.5);
+  --line-soft: oklch(0.40 0.014 60 / 0.22);
+  --peach:     oklch(0.82 0.090 56);
+  --gold:      oklch(0.845 0.095 88);
+  --rose:      oklch(0.745 0.110 32);
+  --plum:      oklch(0.55 0.075 350);
+  --accent:    var(--peach);
+  --maxw: 1280px;
+  --pad: clamp(1.25rem, 5vw, 5rem);
+  --serif-display: "Cormorant Garamond", Georgia, serif;
+  --serif-body: "EB Garamond", Georgia, serif;
+  --ease: cubic-bezier(0.22, 0.7, 0.18, 1);
+}

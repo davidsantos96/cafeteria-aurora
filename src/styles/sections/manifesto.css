@@ -1,0 +1,21 @@
+/* Seção Manifesto: título centralizado e lista de rituais */
+.manifesto { text-align: center; }
+.manifesto .eyebrow { margin-bottom: 2.4rem; }
+.manifesto-lead {
+  font-family: var(--serif-display);
+  font-size: clamp(2.2rem, 5.2vw, 5rem);
+  line-height: 1.08; letter-spacing: -0.015em;
+  max-width: 22ch; margin-inline: auto;
+}
+.rituals { margin: 4.5rem auto 0; max-width: 640px; display: flex; flex-direction: column; }
+.ritual {
+  display: flex; align-items: baseline; gap: 1.5rem;
+  padding: 1.4rem 0; border-top: 1px solid var(--line-soft);
+  text-align: left;
+  font-size: clamp(1.25rem, 2.4vw, 1.7rem); font-family: var(--serif-display); color: var(--ink);
+}
+.ritual:last-child { border-bottom: 1px solid var(--line-soft); }
+.ritual .num {
+  font-family: var(--serif-body); font-size: 0.8rem; letter-spacing: 0.2em;
+  color: var(--peach); min-width: 2.5rem; font-feature-settings: "tnum";
+}

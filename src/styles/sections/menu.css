@@ -1,0 +1,25 @@
+/* Seção Cardápio: cabeçalho, duas colunas e itens */
+.menu-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 2rem; flex-wrap: wrap; margin-bottom: 3rem; }
+.menu-head h2 { font-size: clamp(2.6rem, 6vw, 5rem); }
+.menu-cols { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 6vw, 5rem); }
+.menu-col h3 {
+  font-family: var(--serif-body); font-size: 0.82rem; letter-spacing: 0.3em;
+  text-transform: uppercase; color: var(--peach); margin-bottom: 1.4rem;
+  padding-bottom: 1.4rem; border-bottom: 1px solid var(--line);
+}
+.menu-item {
+  display: grid; grid-template-columns: 1fr auto; align-items: baseline;
+  gap: 0.4rem 1rem; padding: 1.05rem 0; border-bottom: 1px solid var(--line-soft);
+  transition: padding-left 0.4s var(--ease);
+}
+.menu-item:hover { padding-left: 0.7rem; }
+.menu-item .name { font-family: var(--serif-display); font-size: 1.5rem; font-weight: 500; }
+.menu-item .price { font-family: var(--serif-body); color: var(--gold); font-size: 1.15rem; font-feature-settings: "tnum"; }
+.menu-item .desc { grid-column: 1 / -1; color: var(--ink-faint); font-size: 0.98rem; }
+
+@media (max-width: 900px) {
+  .menu-cols { grid-template-columns: 1fr; }
+}
+@media (max-width: 540px) {
+  .menu-head { align-items: flex-start; }
+}
