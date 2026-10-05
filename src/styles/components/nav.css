@@ -24,7 +24,7 @@
   background: radial-gradient(circle at 35% 35%, var(--gold), var(--rose));
   box-shadow: 0 0 14px 2px var(--peach);
 }
-.nav-links { display: flex; gap: clamp(1.2rem, 2vw, 2.4rem); align-items: center; }
+.nav-links { list-style: none; margin: 0; padding: 0; display: flex; gap: clamp(1.2rem, 2vw, 2.4rem); align-items: center; }
 .nav-links a {
   font-size: 0.86rem; letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--ink-soft); position: relative; transition: color 0.3s var(--ease);
