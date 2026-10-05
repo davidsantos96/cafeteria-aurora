@@ -69,3 +69,12 @@ em, .italic { font-style: italic; }
 a:focus-visible, button:focus-visible, .nav-toggle:focus-visible {
   outline: 1.5px solid var(--peach); outline-offset: 3px; border-radius: 2px;
 }
+
+/* Link de atalho para o conteúdo, visível apenas ao receber foco */
+.skip-link {
+  position: fixed; top: 0.75rem; left: 0.75rem; z-index: 200;
+  padding: 0.6rem 1rem; border-radius: 8px;
+  background: var(--ink); color: var(--bg);
+  transform: translateY(-200%);
+}
+.skip-link:focus { transform: none; }

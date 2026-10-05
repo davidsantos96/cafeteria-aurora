@@ -4,8 +4,8 @@
   background: oklch(0.155 0.013 52 / 0.97);
   backdrop-filter: blur(20px);
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.6rem;
-  opacity: 0; pointer-events: none; transition: opacity 0.4s var(--ease);
+  opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.4s var(--ease), visibility 0s linear 0.4s;
 }
-.mobile-menu.open { opacity: 1; pointer-events: auto; }
+.mobile-menu.open { opacity: 1; visibility: visible; pointer-events: auto; transition-delay: 0s; }
 .mobile-menu a { font-family: var(--serif-display); font-size: 2.2rem; color: var(--ink); }
 .mobile-menu a:hover { color: var(--peach); }
